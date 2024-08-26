@@ -1,0 +1,40 @@
+.navbar {
+  background-color: #e5871c; /* Background color of the navbar */
+  padding: 1rem; 
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Distribute space between left and right sections */
+  color: #fff; /* Text color */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  gap: 1rem; /* Space between the elements in the left section */
+}
+
+.navbar-icon {
+  width: 40px; /* Width of the icon image */
+  height: 40px; /* Height of the icon image */
+  border-radius: 50%; /* Make the image circular if it's a square */
+}
+
+.navbar-title {
+  font-size: 1.5rem; /* Font size for the title */
+  margin: 0; /* Remove default margin */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem; /* Space between links */
+}
+
+.navbar-links a {
+  color: #fff; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1rem; /* Font size for the links */
+}
+
+.navbar-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
