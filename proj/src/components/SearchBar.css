@@ -16,7 +16,7 @@
 
 .search-bar input[type="text"]:focus {
   outline: none;
-  border-color: #8b511b;
+  border-color: #e5871c;
 }
 
 .search-bar button {

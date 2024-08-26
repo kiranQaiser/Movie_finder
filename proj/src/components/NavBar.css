@@ -5,14 +5,14 @@
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .navbar-icon {
@@ -72,14 +72,14 @@
   }
 
   .navbar-links {
-    flex-direction: column; /* Stack links vertically on smaller screens */
+    flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
   }
 
   .genre-buttons button {
     font-size: 0.9rem;
-    padding: 0.4rem 0.8rem; /* Slightly smaller padding on smaller screens */
+    padding: 0.4rem 0.8rem;
   }
 }
 
