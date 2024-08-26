@@ -4,6 +4,7 @@ import MovieList from "./components/MovieList";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -45,6 +46,22 @@ function App() {
     }
   };
 
+  // Function to fetch movies by genre
+  const fetchMoviesByGenre = async (genreId) => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=78749223c340a97fb261dfc3425e2557&with_genres=${genreId}`
+      );
+      const data = await response.json();
+      setMovies(data.results);
+    } catch (err) {
+      setError("Failed to fetch movies by genre");
+    }
+    setIsLoading(false);
+  };
+
   useEffect(() => {
     fetchPopularMovies(); // Fetch popular movies on initial load
   }, []);
@@ -56,7 +73,10 @@ function App() {
 
   return (
     <div>
-      <NavBar onNavigate={handleNavigation} />
+      <NavBar
+        onNavigate={handleNavigation}
+        fetchMoviesByGenre={fetchMoviesByGenre}
+      />
       <div className="container">
         {currentPage === "home" && (
           <>
@@ -76,6 +96,7 @@ function App() {
         {currentPage === "about" && <About />}
         {currentPage === "home" && <Home />}
       </div>
+      <Footer /> {/* Include the Footer component */}
     </div>
   );
 }

@@ -1,40 +1,104 @@
 .navbar {
-  background-color: #e5871c; /* Background color of the navbar */
+  background-color: #e5871c;
   padding: 1rem;
   display: flex;
-  align-items: center; /* Vertically align items */
-  justify-content: space-between; /* Distribute space between left and right sections */
-  color: #fff; /* Text color */
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .navbar-left {
   display: flex;
-  align-items: center; /* Align items vertically in the center */
-  gap: 1rem; /* Space between the elements in the left section */
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .navbar-icon {
-  width: 40px; /* Width of the icon image */
-  height: 40px; /* Height of the icon image */
-  border-radius: 50%; /* Make the image circular if it's a square */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .navbar-title {
-  font-size: 1.5rem; /* Font size for the title */
-  margin: 0; /* Remove default margin */
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .navbar-links {
   display: flex;
-  gap: 1rem; /* Space between links */
+  gap: 1rem;
 }
 
 .navbar-links a {
-  color: #fff; /* Link color */
-  text-decoration: none; /* Remove underline from links */
-  font-size: 1rem; /* Font size for the links */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .navbar-links a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
+}
+
+.genre-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.genre-buttons button {
+  background-color: #fff;
+  color: #e5871c;
+  border: 2px solid #e5871c;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.genre-buttons button:hover {
+  background-color: #e5871c;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .genre-buttons button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem; /* Slightly smaller padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar-title {
+    font-size: 1rem;
+  }
+
+  .navbar-links a {
+    font-size: 0.9rem; /* Smaller font size on very small screens */
+  }
+
+  .genre-buttons button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
 }
