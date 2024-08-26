@@ -60,7 +60,7 @@ function App() {
       <div className="container">
         {currentPage === "home" && (
           <>
-            <h1>Movie Finder</h1>
+            <h1>FilmHub</h1>
             <SearchBar onSearch={fetchMovies} />
             {isLoading ? (
               <p>Loading...</p>

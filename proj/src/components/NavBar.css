@@ -1,6 +1,6 @@
 .navbar {
   background-color: #e5871c; /* Background color of the navbar */
-  padding: 1rem; 
+  padding: 1rem;
   display: flex;
   align-items: center; /* Vertically align items */
   justify-content: space-between; /* Distribute space between left and right sections */
